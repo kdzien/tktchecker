@@ -56,6 +56,8 @@ async function main(page: Page) {
     }
     console.log(result);
     const available = result.filter(e => e.active);
+        notify(result);
+
     if (available.length) {
         notify(available);
     }
