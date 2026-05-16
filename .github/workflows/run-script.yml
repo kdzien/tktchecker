@@ -27,7 +27,17 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Cache Patchright browsers
+        id: patchright-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: patchright-browsers-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            patchright-browsers-${{ runner.os }}-
+
       - name: Install Patchright Chromium
+        if: steps.patchright-cache.outputs.cache-hit != 'true'
         run: npx patchright install --with-deps chromium
 
       - name: Run script

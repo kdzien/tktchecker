@@ -54,10 +54,7 @@ async function main(page: Page) {
             active: !text?.includes('Currently not available')
         })
     }
-    console.log(result);
     const available = result.filter(e => e.active);
-        notify(result);
-
     if (available.length) {
         notify(available);
     }
