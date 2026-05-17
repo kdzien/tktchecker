@@ -74,9 +74,7 @@ async function run() {
         });
     
         const page = await context.newPage();
-        main(page).then().catch().finally(() => {
-            browser.close();
-        });
+        await main(page);
     } catch (err) {
         await browser?.close();
     } finally {
