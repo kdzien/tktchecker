@@ -79,7 +79,8 @@ async function run() {
         });
     } catch (err) {
         await browser?.close();
-        run();
+    } finally {
+        await browser?.close();
     }
 }
 
