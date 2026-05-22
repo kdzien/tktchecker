@@ -26,6 +26,7 @@ export abstract class Checker<TCheckResult> {
             const notifyData = this.prepareNotifyMessage(result);
             await this.notifyAsync(notifyData);
         } catch (err) {
+            console.log(err);
             await browser?.close();
         } finally {
             await browser?.close();
