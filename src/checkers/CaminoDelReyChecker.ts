@@ -1,6 +1,6 @@
 import { Page } from "patchright";
 import { Checker, NotifyData } from "../Checker";
-import { expect } from "patchright/test";
+import 'dotenv/config';
 
 type CaminoDelReyCheckerResult = string[] | null
 

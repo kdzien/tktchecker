@@ -1,5 +1,6 @@
 import { Page } from "patchright";
 import { Checker, NotifyData } from "../Checker";
+import 'dotenv/config';
 
 type LPCheckerResult = {
     type?: string;
