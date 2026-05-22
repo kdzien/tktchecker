@@ -11,7 +11,7 @@ jobs:
       ENV_MAIL: ${{ secrets.ENV_MAIL }}
       ENV_PASS: ${{ secrets.ENV_PASS }}
       ENV_URL: ${{ secrets.ENV_URL }}
-      ENV_URL: ${{ secrets.ENV_URL2 }}
+      ENV_URL2: ${{ secrets.ENV_URL2 }}
 
     steps:
       - name: Checkout repository
