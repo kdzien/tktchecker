@@ -5,7 +5,7 @@ import { CaminoDelReyChecker } from './src/checkers/CaminoDelReyChecker';
 
 async function main() {
     const checkers: Checker<any>[] = [
-        new LPTicketsChecker(),
+        // new LPTicketsChecker(),
         new CaminoDelReyChecker()
     ];
 
